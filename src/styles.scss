@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+@import "assets/css/font.scss";
+@import "assets/css/modal.scss";
+@import "assets/css/skeleton.scss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.ant-menu-inline.ant-menu-root .ant-menu-item > .ant-menu-title-content, .ant-menu-inline.ant-menu-root .ant-menu-submenu-title > .ant-menu-title-content {
+  flex: auto;
+  min-width: 0;
+  color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bg-primary-submenu{
+  background: #8f1013;
+  background-color: #8f1013;
+}

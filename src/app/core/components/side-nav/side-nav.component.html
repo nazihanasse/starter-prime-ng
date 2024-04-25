@@ -1,0 +1,112 @@
+<div class="h-full flex flex-col pb-5">
+  <div
+    class="pt-3 sidebar-logo relative items-center transition-all duration-300 overflow-hidden mb-4"
+  >
+    <div class="ml-6 flex items-center gap-8">
+      <img
+        alt="menu"
+        ngSrc="../../../assets/icons/ic_round-menu.svg"
+        width="33"
+        height="33"
+        class="cursor-pointer"
+        (click)="collapse.emit(true)"
+      />
+      <img
+        ngSrc="../../../assets/images/oc-logo.jpg"
+        width="150"
+        height="55"
+        alt="oc-logo"
+      />
+    </div>
+  </div>
+
+  <div class="h-full flex flex-col justify-between">
+    <ul
+      class="border-0"
+      nz-menu
+      nzMode="inline"
+      [nzInlineCollapsed]="isCollapsed"
+    >
+      <li nz-submenu nzTitle="Opérateurs" nzIcon="book">
+        <ul class="border-0 bg-primary-submenu text-white">
+          <li nz-menu-item nzMatchRouter routerLink="/11s">
+            <div>
+              <span>Sociétés de change de devises</span>
+            </div>
+          </li>
+          <li nz-menu-item nzMatchRouter routerLink="/test23">
+            <div>
+              <span>Établissements de paiement</span>
+            </div>
+          </li>
+          <li nz-menu-item nzMatchRouter routerLink="/theme">
+            <div>
+              <span>Établissements Sous Délégataires</span>
+            </div>
+          </li>
+          <li nz-menu-item nzMatchRouter routerLink="/test23">
+            <div>
+              <span>Banques</span>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li nz-submenu nzTitle="Opérations" nzIcon="cloud-upload">
+        <ul class="border-0 bg-primary-submenu text-white">
+          <li nz-menu-item nzMatchRouter routerLink="/11s">
+            <div>
+              <span>Ventes</span>
+            </div>
+          </li>
+          <li nz-menu-item nzMatchRouter routerLink="/test23">
+            <div>
+              <span>Achats</span>
+            </div>
+          </li>
+          <li nz-menu-item nzMatchRouter routerLink="/test23">
+            <div>
+              <span>Cessions</span>
+            </div>
+          </li>
+
+        </ul>
+      </li>
+      <li nz-menu-item nzMatchRouter routerLink="/theme">
+        <span nz-icon [nzType]="'star'" [nzTheme]="'fill'"></span>
+        <span>LBC-FT</span>
+      </li>
+      <li nz-menu-item nzMatchRouter routerLink="/theme">
+        <span nz-icon [nzType]="'dasboard'" [nzTheme]="'fill'"></span>
+        <span>Rapports</span>
+      </li>
+      <li nz-menu-item nzMatchRouter routerLink="/theme">
+        <span nz-icon nzType="form" nzTheme="outline"></span>
+        <span>Espace Information CM</span>
+      </li>
+    </ul>
+
+    <div>
+      <ul
+        class="border-0"
+        nz-menu
+        nzMode="vertical"
+        [nzInlineCollapsed]="isCollapsed"
+      >
+        <div class="side-nav-divider"></div>
+        <li nz-menu-item (click)="(null)">
+          <i nz-icon nzType="logout"></i>
+          <span>Utilisateurs</span>
+        </li>
+        <li nz-menu-item (click)="(null)">
+          <i nz-icon nzType="logout"></i>
+          <span>Paramètres</span>
+        </li>
+
+        <li nz-menu-item (click)="(null)">
+          <i nz-icon nzType="logout"></i>
+          <span>Logout</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
